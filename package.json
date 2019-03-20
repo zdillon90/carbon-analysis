@@ -1,0 +1,33 @@
+{
+  "name": "puppet-cost-carbon",
+  "version": "1.0.0",
+  "description": "Automaticly running parts through Carbon's printing software to get machine and material usage",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "dev": "node -r esm index.js"
+  },
+  "author": "Zach Dillon",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-wesbos": "0.0.19",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.5.1",
+    "prettier": "^1.16.4"
+  },
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "esm": "^3.2.17",
+    "puppeteer": "^1.13.0",
+    "sleep": "^6.0.0"
+  }
+}
