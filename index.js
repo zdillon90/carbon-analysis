@@ -1,15 +1,17 @@
 import {
   startup,
   gotoURL,
-  getScreenshot,
+  uploadModel,
   close,
   login,
   newTab,
+  deleteOldModel,
 } from './lib/puppet';
 
 require('dotenv').config();
 
 async function go() {
+  const oldModel = './original-8876630_v0.stl';
   const browser = await startup();
   const page = await newTab(browser);
   const automationProjectURL =
@@ -20,11 +22,11 @@ async function go() {
   const printPage = await newTab(browser);
   await gotoURL(printPage, automationProjectURL);
   const url = printPage.url(automationProjectURL);
-  console.log(url);
   if (url !== automationProjectURL) {
     await login(printPage);
   }
-  await getScreenshot(printPage);
+  await uploadModel(printPage, './original-8904665_v0.stl');
+  await deleteOldModel(printPage, oldModel);
   // await close(browser);
 }
 
