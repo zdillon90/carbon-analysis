@@ -6,6 +6,7 @@ import {
   login,
   newTab,
   deleteOldModel,
+  layoutPart,
 } from './lib/puppet';
 
 require('dotenv').config();
@@ -27,6 +28,7 @@ async function go() {
   }
   await uploadModel(printPage, './original-8904665_v0.stl');
   await deleteOldModel(printPage, oldModel);
+  await layoutPart(printPage);
   // await close(browser);
 }
 
