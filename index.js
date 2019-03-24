@@ -8,12 +8,12 @@ import {
   deleteOldModel,
   layoutPart,
   supportPart,
+  analyzePart,
 } from './lib/puppet';
 
 require('dotenv').config();
 
 async function go() {
-  const oldModel = './original-8876630_v0.stl';
   const browser = await startup();
   const page = await newTab(browser);
   const automationProjectURL =
@@ -28,9 +28,10 @@ async function go() {
     await login(printPage);
   }
   await uploadModel(printPage, './original-8904665_v0.stl');
-  await deleteOldModel(printPage, oldModel);
+  await deleteOldModel(printPage);
   await layoutPart(printPage);
   await supportPart(printPage);
+  await analyzePart(printPage);
   // await close(browser);
 }
 
