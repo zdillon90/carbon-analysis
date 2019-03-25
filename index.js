@@ -27,7 +27,7 @@ async function go() {
   if (url !== automationProjectURL) {
     await login(printPage);
   }
-  await uploadModel(printPage, './original-8904665_v0.stl');
+  await uploadModel(printPage, './stls/original-8935574_v0.stl');
   await deleteOldModel(printPage);
   await layoutPart(printPage);
   await supportPart(printPage);
