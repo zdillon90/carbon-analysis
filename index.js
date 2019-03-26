@@ -27,12 +27,15 @@ async function go() {
   if (url !== automationProjectURL) {
     await login(printPage);
   }
-  await uploadModel(printPage, './stls/original-8935574_v0.stl');
+  await uploadModel(
+    printPage,
+    '/Users/zachdillon/Downloads/original-8935568_v0.stl'
+  );
   await deleteOldModel(printPage);
   await layoutPart(printPage);
   await supportPart(printPage);
   await analyzePart(printPage);
-  // await close(browser);
+  await close(browser);
 }
 
 go();
