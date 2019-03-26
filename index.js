@@ -27,10 +27,7 @@ async function go() {
   if (url !== automationProjectURL) {
     await login(printPage);
   }
-  await uploadModel(
-    printPage,
-    '/Users/zachdillon/Downloads/original-8935568_v0.stl'
-  );
+  await uploadModel(printPage, '/Users/zachd/Downloads/8936427.stl');
   await deleteOldModel(printPage);
   await layoutPart(printPage);
   await supportPart(printPage);
