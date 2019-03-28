@@ -1,3 +1,4 @@
+import express from 'express';
 import {
   startup,
   gotoURL,
@@ -14,7 +15,9 @@ import {
 
 require('dotenv').config();
 
-async function go() {
+const app = express();
+
+async function carbonGo() {
   const browser = await startup();
   const page = await newTab(browser);
   const automationProjectURL =
@@ -28,13 +31,23 @@ async function go() {
   if (url !== automationProjectURL) {
     await login(printPage);
   }
-  await uploadModel(printPage, '/Users/zachd/Downloads/3413311.stl');
+  await uploadModel(printPage, '/Users/zachd/Downloads/8939602.stl');
   await deleteOldModel(printPage);
   await minFootprint(printPage);
   await layoutPart(printPage);
   await supportPart(printPage);
-  await analyzePart(printPage);
+  const partVariables = await analyzePart(printPage);
   await close(browser);
+  return partVariables;
 }
 
-go();
+// carbonGo();
+
+app.get('/scrape', async (req, res, next) => {
+  const variables = await carbonGo();
+  res.json({ variables });
+});
+
+app.listen(2250, () => {
+  console.log('Example App running on port 2250');
+});
