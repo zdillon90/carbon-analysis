@@ -9,6 +9,7 @@ import {
   layoutPart,
   supportPart,
   analyzePart,
+  minFootprint,
 } from './lib/puppet';
 
 require('dotenv').config();
@@ -27,8 +28,9 @@ async function go() {
   if (url !== automationProjectURL) {
     await login(printPage);
   }
-  await uploadModel(printPage, '/Users/zachd/Downloads/8936427.stl');
+  await uploadModel(printPage, '/Users/zachd/Downloads/3413311.stl');
   await deleteOldModel(printPage);
+  await minFootprint(printPage);
   await layoutPart(printPage);
   await supportPart(printPage);
   await analyzePart(printPage);
