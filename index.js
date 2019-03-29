@@ -31,23 +31,26 @@ async function carbonGo() {
   if (url !== automationProjectURL) {
     await login(printPage);
   }
-  await uploadModel(printPage, '/Users/zachd/Downloads/8939602.stl');
+  await uploadModel(printPage, '/Users/zachd/Downloads/8559997.stl');
+  // 8939602 Good model file for testing
   await deleteOldModel(printPage);
   await minFootprint(printPage);
   await layoutPart(printPage);
   await supportPart(printPage);
+  // TODO Need to add duplication for orders of more than 1
+  // There will be a need to look at deleting only all but one with multiples
   const partVariables = await analyzePart(printPage);
   await close(browser);
   return partVariables;
 }
 
-// carbonGo();
+carbonGo();
 
-app.get('/scrape', async (req, res, next) => {
-  const variables = await carbonGo();
-  res.json({ variables });
-});
+// app.get('/scrape', async (req, res, next) => {
+//   const variables = await carbonGo();
+//   res.json({ variables });
+// });
 
-app.listen(2250, () => {
-  console.log('Example App running on port 2250');
-});
+// app.listen(2250, () => {
+//   console.log('Example App running on port 2250');
+// });
