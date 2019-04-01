@@ -18,10 +18,12 @@ require('dotenv').config();
 const app = express();
 
 async function carbonGo() {
+  const modelFileName = 'original-8956416_v0.stl';
   const browser = await startup();
   const page = await newTab(browser);
   const automationProjectURL =
     'http://m2328.shapeways.print.carbon3d.com/projects/79';
+  // TODO Each Material will have it's own project and API endpoint
   const carbonURL = 'https://shapeways.print.carbon3d.com/printers';
   await gotoURL(page, carbonURL);
   await login(page);
@@ -31,7 +33,7 @@ async function carbonGo() {
   if (url !== automationProjectURL) {
     await login(printPage);
   }
-  await uploadModel(printPage, '/Users/zachd/Downloads/8559997.stl');
+  await uploadModel(printPage, `/Users/zachd/Downloads/${modelFileName}`);
   // 8939602 Good model file for testing
   await deleteOldModel(printPage);
   await minFootprint(printPage);
