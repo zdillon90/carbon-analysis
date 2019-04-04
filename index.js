@@ -2,6 +2,7 @@ import express from 'express';
 import {
   startup,
   gotoURL,
+  selectResin,
   uploadModel,
   close,
   login,
@@ -33,10 +34,17 @@ async function carbonGo() {
   if (url !== automationProjectURL) {
     await login(printPage);
   }
-  await uploadModel(printPage, `/Users/zachd/Downloads/${modelFileName}`);
+  await uploadModel(
+    printPage,
+    `/Users/zachd/Downloads/${modelFileName}`,
+    modelFileName
+  );
+  // await selectResin(printPage, 'RPU 70');
   // 8939602 Good model file for testing
   await deleteOldModel(printPage);
   await minFootprint(printPage);
+  // TODO Look into wether the orentation of the model can change to
+  // 90 90 90 on all axises for the biggest the largest footprint then check to see if the model fits
   await layoutPart(printPage);
   await supportPart(printPage);
   // TODO Need to add duplication for orders of more than 1
