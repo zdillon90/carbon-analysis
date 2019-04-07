@@ -9,6 +9,7 @@ import {
   newTab,
   deleteOldModel,
   layoutPart,
+  maxFootPrint,
   supportPart,
   analyzePart,
   minFootprint,
@@ -19,12 +20,11 @@ require('dotenv').config();
 const app = express();
 
 async function carbonGo() {
-  const modelFileName = 'original-8956416_v0.stl';
+  const modelFileName = 'original-9003703_v0.stl';
   const browser = await startup();
   const page = await newTab(browser);
   const automationProjectURL =
     'http://m2328.shapeways.print.carbon3d.com/projects/79';
-  // TODO Each Material will have it's own project and API endpoint
   const carbonURL = 'https://shapeways.print.carbon3d.com/printers';
   await gotoURL(page, carbonURL);
   await login(page);
@@ -45,6 +45,7 @@ async function carbonGo() {
   await minFootprint(printPage);
   // TODO Look into wether the orentation of the model can change to
   // 90 90 90 on all axises for the biggest the largest footprint then check to see if the model fits
+  await maxFootPrint(printPage);
   await layoutPart(printPage);
   await supportPart(printPage);
   // TODO Need to add duplication for orders of more than 1
