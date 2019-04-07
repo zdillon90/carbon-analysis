@@ -10,6 +10,7 @@ import {
   deleteOldModel,
   layoutPart,
   maxFootPrint,
+  checkFit,
   supportPart,
   analyzePart,
   minFootprint,
@@ -43,9 +44,9 @@ async function carbonGo() {
   // 8939602 Good model file for testing
   await deleteOldModel(printPage);
   await minFootprint(printPage);
-  // TODO Look into wether the orentation of the model can change to
-  // 90 90 90 on all axises for the biggest the largest footprint then check to see if the model fits
   await maxFootPrint(printPage);
+  await checkFit(printPage);
+  // TODO Check to see if the model fits in this orentation
   await layoutPart(printPage);
   await supportPart(printPage);
   // TODO Need to add duplication for orders of more than 1
