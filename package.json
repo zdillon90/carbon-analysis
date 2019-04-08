@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Automaticly running parts through Carbon's printing software to get machine and material usage",
   "main": "index.js",
+  "repository": "https://github.com/zdillon90/carbon-analysis",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -26,6 +27,7 @@
     "prettier": "^1.16.4"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "dotenv": "^7.0.0",
     "esm": "^3.2.17",
     "express": "^4.16.4",
