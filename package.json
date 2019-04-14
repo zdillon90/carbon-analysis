@@ -34,6 +34,8 @@
     "googleapis": "^27.0.0",
     "lowdb": "^1.0.0",
     "puppeteer": "^1.13.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
     "sleep": "^6.0.0"
   }
 }

@@ -20,12 +20,27 @@ require('dotenv').config();
 
 const app = express();
 
-async function carbonGo() {
-  const modelFileName = 'original-9003703_v0.stl';
+const modelFileName = 'original-7934871_v0.stl';
+const resin = 'EPU';
+
+function resinSelect(resinName) {
+  if (resinName === 'RPU') {
+    return '79';
+  }
+  if (resinName === 'EPU') {
+    return '128';
+  }
+  if (resinName === 'UMA') {
+    return '129';
+  }
+  console.log('Resin input invalid');
+}
+
+async function carbonGo(model) {
   const browser = await startup();
   const page = await newTab(browser);
-  const automationProjectURL =
-    'http://m2328.shapeways.print.carbon3d.com/projects/79';
+  const resinProject = resinSelect(resin);
+  const automationProjectURL = `http://m2328.shapeways.print.carbon3d.com/projects/${resinProject}`;
   const carbonURL = 'https://shapeways.print.carbon3d.com/printers';
   await gotoURL(page, carbonURL);
   await login(page);
@@ -35,18 +50,13 @@ async function carbonGo() {
   if (url !== automationProjectURL) {
     await login(printPage);
   }
-  await uploadModel(
-    printPage,
-    `/Users/zachd/Downloads/${modelFileName}`,
-    modelFileName
-  );
+  await uploadModel(printPage, `/Users/zachd/Downloads/${model}`, model);
   // await selectResin(printPage, 'RPU 70');
   // 8939602 Good model file for testing
   await deleteOldModel(printPage);
   await minFootprint(printPage);
   await maxFootPrint(printPage);
   await checkFit(printPage);
-  // TODO Check to see if the model fits in this orentation
   await layoutPart(printPage);
   await supportPart(printPage);
   // TODO Need to add duplication for orders of more than 1
@@ -56,7 +66,7 @@ async function carbonGo() {
   return partVariables;
 }
 
-carbonGo();
+carbonGo(modelFileName);
 
 // app.get('/scrape', async (req, res, next) => {
 //   const variables = await carbonGo();
