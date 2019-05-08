@@ -2,6 +2,7 @@ import express from 'express';
 import {
   startup,
   gotoURL,
+  inLogin,
   selectResin,
   uploadModel,
   close,
@@ -20,8 +21,9 @@ require('dotenv').config();
 
 const app = express();
 
-const modelFileName = 'original-7934871_v0.stl';
+const modelFileName = '9155940.stl';
 const resin = 'EPU';
+const quantity = 30;
 
 function resinSelect(resinName) {
   if (resinName === 'RPU') {
@@ -38,6 +40,9 @@ function resinSelect(resinName) {
 
 async function carbonGo(model) {
   const browser = await startup();
+  // const inPage = await newTab(browser);
+  // await gotoURL(inPage, 'https://inshape.shapeways.com/login');
+  // await inLogin(inPage);
   const page = await newTab(browser);
   const resinProject = resinSelect(resin);
   const automationProjectURL = `http://m2328.shapeways.print.carbon3d.com/projects/${resinProject}`;
