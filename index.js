@@ -1,4 +1,5 @@
 import express from 'express';
+import fs from 'fs';
 import {
   startup,
   gotoURL,
@@ -21,10 +22,6 @@ require('dotenv').config();
 
 const app = express();
 
-const modelFileName = '9155940.stl';
-const resin = 'EPU';
-const quantity = 30;
-
 function resinSelect(resinName) {
   if (resinName === 'RPU') {
     return '79';
@@ -38,13 +35,13 @@ function resinSelect(resinName) {
   console.log('Resin input invalid');
 }
 
-async function carbonGo(model) {
+async function carbonGo(model, resinType) {
   const browser = await startup();
   // const inPage = await newTab(browser);
   // await gotoURL(inPage, 'https://inshape.shapeways.com/login');
   // await inLogin(inPage);
   const page = await newTab(browser);
-  const resinProject = resinSelect(resin);
+  const resinProject = resinSelect(resinType);
   const automationProjectURL = `http://m2328.shapeways.print.carbon3d.com/projects/${resinProject}`;
   const carbonURL = 'https://shapeways.print.carbon3d.com/printers';
   await gotoURL(page, carbonURL);
@@ -56,22 +53,30 @@ async function carbonGo(model) {
     await login(printPage);
   }
   await uploadModel(printPage, `/Users/zachd/Downloads/${model}`, model);
-  // await selectResin(printPage, 'RPU 70');
-  // 8939602 Good model file for testing
   await deleteOldModel(printPage);
   await minFootprint(printPage);
   await maxFootPrint(printPage);
   await checkFit(printPage);
   await layoutPart(printPage);
   await supportPart(printPage);
-  // TODO Need to add duplication for orders of more than 1
-  // There will be a need to look at deleting only all but one with multiples
   const partVariables = await analyzePart(printPage);
   await close(browser);
   return partVariables;
 }
 
-carbonGo(modelFileName);
+// const modelFileName = '7211564.stl';
+async function main() {
+  const resin = 'UMA';
+  const rawData = fs.readFileSync('stls.json');
+  const data = JSON.parse(rawData);
+  // const stlFile = data[0].stl;
+  for await (const stlFile of data) {
+    console.log(stlFile.stl);
+    await carbonGo(stlFile.stl, resin);
+  }
+}
+
+main();
 
 // app.get('/scrape', async (req, res, next) => {
 //   const variables = await carbonGo();
