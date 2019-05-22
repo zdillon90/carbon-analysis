@@ -1,5 +1,6 @@
 import express from 'express';
 import fs from 'fs';
+import convertModel from './lib/convert';
 import {
   startup,
   gotoURL,
@@ -71,8 +72,12 @@ async function main() {
   const data = JSON.parse(rawData);
   // const stlFile = data[0].stl;
   for await (const stlFile of data) {
-    console.log(stlFile.stl);
-    await carbonGo(stlFile.stl, resin);
+    await convertModel(stlFile.model, stlFile.version);
+    // TODO Add a check in for weather imputs are ints or strings and convert to strings
+    const stlFileName = `${stlFile.model}.stl`;
+    console.log(stlFileName);
+    await carbonGo(stlFileName, resin);
+    // TODO Write the costs to the json file
   }
 }
 
