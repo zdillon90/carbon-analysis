@@ -71,14 +71,22 @@ async function main() {
   const rawData = fs.readFileSync('stls.json');
   const data = JSON.parse(rawData);
   // const stlFile = data[0].stl;
+  const outputList = [];
   for await (const stlFile of data) {
     await convertModel(stlFile.model, stlFile.version);
     // TODO Add a check in for weather imputs are ints or strings and convert to strings
     const stlFileName = `${stlFile.model}.stl`;
     console.log(stlFileName);
-    await carbonGo(stlFileName, resin);
-    // TODO Write the costs to the json file
+    const rawCost = await carbonGo(stlFileName, resin);
+    const cost = `$${rawCost.toFixed(2)}`;
+    const modelWithCost = {
+      model: stlFile.model,
+      cost,
+    };
+    outputList.push(modelWithCost);
   }
+  const outputData = JSON.stringify(outputList, null, 2);
+  fs.writeFileSync('output.json', outputData);
 }
 
 main();
