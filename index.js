@@ -65,23 +65,21 @@ async function carbonGo(model, resinType) {
   return partVariables;
 }
 
-// const modelFileName = '7211564.stl';
 async function main() {
-  const resin = 'UMA';
   const rawData = fs.readFileSync('stls.json');
   const data = JSON.parse(rawData);
-  // const stlFile = data[0].stl;
   const outputList = [];
   for await (const stlFile of data) {
-    await convertModel(stlFile.model, stlFile.version);
-    // TODO Add a check in for weather imputs are ints or strings and convert to strings
-    const stlFileName = `${stlFile.model}.stl`;
+    const { resin, model, version } = stlFile;
+    await convertModel(model, version);
+    const stlFileName = `${model}.stl`;
     console.log(stlFileName);
     const rawCost = await carbonGo(stlFileName, resin);
     const cost = `$${rawCost.toFixed(2)}`;
     const modelWithCost = {
-      model: stlFile.model,
+      model,
       cost,
+      resin,
     };
     outputList.push(modelWithCost);
   }

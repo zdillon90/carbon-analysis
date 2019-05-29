@@ -1,10 +1,27 @@
 [
     {
-        "model": 9220004,
-        "version": 0
+        "model": 7211564,
+        "version": 0,
+        "resin": "UMA"
     },
     {
-        "model": 9220005,
-        "version": 0
+        "model": 3136143,
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": 7260945,
+        "version": 1,
+        "resin": "UMA"
+    },
+    {
+        "model": 4557162,
+        "version": 3,
+        "resin": "UMA"
+    },
+    {
+        "model": 1549076,
+        "version": 18,
+        "resin": "UMA"
     }
 ]
