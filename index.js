@@ -53,7 +53,12 @@ async function carbonGo(model, resinType) {
   if (url !== automationProjectURL) {
     await login(printPage);
   }
-  await uploadModel(printPage, `/Users/zachd/Downloads/${model}`, model);
+  await uploadModel(
+    printPage,
+    `C:\\Users\\Zach Dillon\\Downloads\\${model}`,
+    model
+  );
+  // TODO place place the path of the model upload in the .env file
   await deleteOldModel(printPage);
   await minFootprint(printPage);
   await maxFootPrint(printPage);
@@ -71,7 +76,7 @@ async function main() {
   const outputList = [];
   for await (const stlFile of data) {
     const { resin, model, version } = stlFile;
-    await convertModel(model, version);
+    // await convertModel(model, version);
     const stlFileName = `${model}.stl`;
     console.log(stlFileName);
     const rawCost = await carbonGo(stlFileName, resin);

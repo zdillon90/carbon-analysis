@@ -1,27 +1,7 @@
 [
     {
-        "model": 7211564,
+        "model": 9256350,
         "version": 0,
-        "resin": "UMA"
-    },
-    {
-        "model": 3136143,
-        "version": 0,
-        "resin": "UMA"
-    },
-    {
-        "model": 7260945,
-        "version": 1,
-        "resin": "UMA"
-    },
-    {
-        "model": 4557162,
-        "version": 3,
-        "resin": "UMA"
-    },
-    {
-        "model": 1549076,
-        "version": 18,
-        "resin": "UMA"
+        "resin": "EPU"
     }
 ]
