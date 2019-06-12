@@ -1,7 +1,532 @@
 [
     {
-        "model": 9256350,
+        "model": "4117971.v1.printer",
         "version": 0,
-        "resin": "EPU"
+        "resin": "UMA"
+    },
+    {
+        "model": "4052766.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "4080887.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5977977.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "1914496.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5192625.v14.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3800738.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5864739.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3924370.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3627429.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3303436.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "7211729.v3.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "2619018.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "2158832.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3593769.v4.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "4484372.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3800741.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3588187.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "6176019.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5137115.v8.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3772640.v4.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "6456430.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "4483985.v4.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "2888780.v13.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "4043884.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "1761193.v7.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "1764972.v6.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "2037189.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "8682822.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3566601.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "2903745.v5.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "4321622.v5.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5785166.v3.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3544978.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "1192395.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "1409292.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3177233.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3650889.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "1878765.v4.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3180088.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "1075118.v8.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "1519181.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "6204865.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "8399951.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5881996.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "6456430.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3177273.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5324865.v4.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3180088.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3730098.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "1384924.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5375441.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3592359.v5.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "6810771.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "4215308.v6.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "2355185.v5.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5363788.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "1383714.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5877215.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5313175.v6.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5600842.v3.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "6203182.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "4603042.v9.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "6203181.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "6970167.v6.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5700806.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3658351.v14.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "2451736.v4.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3470943.v3.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "2614288.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "2979286.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5639629.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3324412.v4.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3454800.v6.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "6361805.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5639625.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5541600.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "4037398.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "4479786.v8.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5364528.v5.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5772448.v6.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "4979021.v3.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5572908.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "6197349.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "6042397.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3629843.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "6584316.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "4863369.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "2752348.v3.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3454800.v6.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "2220108.v4.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "1250122.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "4381005.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "6006330.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "4712630.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5650103.v7.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5988762.v3.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "3915171.v2.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5783422.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5623993.v4.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5772448.v6.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5375440.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "5137310.v3.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "1647834.v1.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "7290395.v0.printer",
+        "version": 0,
+        "resin": "UMA"
+    },
+    {
+        "model": "1250122.v0.printer",
+        "version": 0,
+        "resin": "UMA"
     }
 ]
